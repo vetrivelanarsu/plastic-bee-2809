@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+   
+     <nav id="nav">
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <q>FREE SHIPPING ON ORDERS ABOVE $40 OR MORE</q>
+            
+            </div>
+            
+            <div class="mySlides">
+              <q> BUY ONE GET ONE AT 50% OFF</q>
+             
+            </div>
+            
+            <div class="mySlides">
+              <q>UP TO 30% OFF ON PRE ORDERS</q>
+              
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            
+
+        <div id="top1">
+                <div id="one">
+                    <p>STORES AND EVENTS</p>
+                    <p>BLOG & PODCAST</p>
+                    <p>MEMBERSHIP</p>
+                    <p>COUPONS AND DEALS</p>
+                    <p>BESTSELLERS</p>
+                    <p>GIFT CARDS</p>
+                </div>
+
+                <div id="two">
+                    <img id="icon" src="icons\icons8-male-user-50.png" alt="">
+                    <p>MY ACCOUNT</p>
+                    <img id="icon" src="icons\icons8-heart-48.png" alt="">
+                    <p>WISHLIST</p>
+                </div>
+        </div>
+
+        <div id="top2">
+            <h3>AUTHOR & ATTIC</h3>
+            <button id="bt" type="submit">ALL</button>
+            <input id="in" type="text" placeholder="Search by Title,Author,Keyword or ISBN" name="search">
+            <button id="btn" type="submit"><i class="fa fa-search"></i></button>
+            <img id="carti" src="icons\icons8-shopping-cart-64.png" alt="">
+        </div>
+
+   </nav>
+
+
+
+
+
+    </main>
+</body>
+<SCript>
+    var slideIndex = 1;
+
+showSlides(slideIndex);
+
+
+
+
+setTimeout(() => {
+  console.log("Delayed for 1 second.")
+ 
+}, "1000")
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+ function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+ 
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+ 
+}
+
+</SCript>
+</html>

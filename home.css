@@ -1,0 +1,103 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+}
+#nav{
+    /* width: 90%; */
+    margin:0px 30px 0px 30px;
+}
+#icon{
+    height: 30px;
+    margin-top: 15px;
+}
+#carti{
+    height:50px;
+    margin-left: 100px;
+}
+
+#top1{
+    display: flex;
+    /* width:60% */
+    justify-content: space-around;
+
+}
+#one{
+    display: flex;
+    width:60%;
+    justify-content: space-between;
+}
+#one>p:hover {
+    text-decoration: underline;
+  }
+  
+      
+
+#two{
+    display: flex;
+    justify-content: space-between;
+    width:18%;
+}
+#top2{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 10px;
+    /* justify-content: space-between; */
+    
+}
+#in{
+    width:60%;
+    height:45px;
+   
+}
+#btn{
+    height:45px;
+    width:70px;
+}
+#bt{
+ margin-left: 10px;
+ height:45px;
+ width:70px;
+ 
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background-color:  #3E5863;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 8px;
+  text-align: center;
+  color: white;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  /* margin-left: 10px; */
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
