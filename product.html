@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <style>
+        *{
+         margin :0px;
+        padding:0px;
+        }
+        .full{
+            width: 100%;
+            display: flex;
+            margin:auto;
+        }
+        .up{
+            text-align: center;
+        }
+        .left{
+            width: 20%;
+           text-align: center;
+           border: 1px solid red;
+        }
+        .productlist{
+            width:80%;
+            border: 1px solid red;
+            margin-left: 30px;
+        }
+        .productlist>.inner{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            border: 1px solid red;
+        }
+        .inner>div{
+            width:90%;
+            border: 1px solid red;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: auto;
+            text-align: center;
+        }
+        .inner>div>img{
+            width : 80%;
+
+        }
+        .left>li{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="up">
+         <h1>BOOKS</h1>
+         <p>Discover swoon-worthy romance novels and the greatest love stories of all time.</p>
+     </div>
+ 
+    <div class="full">
+     <div class="left">
+     <ul>
+        <h2>CUSTOMER FAVUORITES</h2>
+        <li>B&N Top 100</li>
+        <li>Teens & YA Top 100</li>
+        <li>Kids Top 100</li>
+        <li>New Releases</li>
+        <li>Coming Soon</li>
+        <li>Books By Subject</li>
+     </ul>
+     <ul>
+        <h2>SPECIAL VALUES</h2>
+        <li>Buy 1, Get 1 50% Off</li>
+        <li>Bestsellers 30% Off</li>
+        <li>Up to 30% Off Pre-Orders</li>
+        <li>Book Annex</li>
+        <li>B&N Collectible Editions</li>
+        <li>Coupons & Deals</li>
+     </ul>
+     <ul>
+        <h2>SPECIAL COLLECTIONS</h2>
+        <li>Our Monthly Picks</li>
+        <li>Book Club Selections</li>
+        <li>Discover Pick of the Month</li>
+        <li>Bookseller Favorites</li>
+        <li>B&N Book of the Year</li>
+        <li>Boxed Sets</li>
+     </ul>
+     <ul>
+        <h2>SUBJECTS</h2>
+        <li>Contemporary Romance</li>
+        <li>Historical Romance</li>
+        <li>Other Romance</li>
+        <li>Paranormal Romance</li>
+        <li>Romantic Fiction</li>
+        <li>Themes</li>
+     </ul>
+     <!-- <ul>
+        <h2>PRICES</h2>
+        <li>B&N Top 100</li>
+        <li>Teens & YA Top 100</li>
+        <li>Kids Top 100</li>
+        <li>New Releases</li>
+        <li>Coming Soon</li>
+        <li>Books By Subject</li>
+     </ul> -->
+     </div>
+
+    <div class="productlist">
+       <div class="inner">
+
+       </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+<script src="./product.js"></script>
+</html>

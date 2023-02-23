@@ -22,9 +22,9 @@ logIn.addEventListener('click',function(){
 
 let userDB = JSON.parse(localStorage.getItem('users'))||[];
 
-signinuser.addEventListener('submit',function(event){
+signinuser.addEventListener('submit',function(e){
     
-  
+  e.preventDefault()
     let formData = {
         name:  signinuser.sName.value,
         email:  signinuser.sEmail.value,
