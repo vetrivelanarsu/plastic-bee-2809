@@ -1,10 +1,13 @@
 
-async function FetchData(){
+async function FetchData(page=1){
     try{
-        let res = await fetch('https://pastic4-bee.onrender.com/Books')
+        let res = await fetch(`https://pastic4-bee.onrender.com/Books?_limit=10&_page=${page}`)
+        let totalitem = res.headers.get('X-Total-Count');
+        let totalpage=Math.ceil(totalitem/10)
         res = await res.json()
         console.log(res)
         displayproduct(res)
+        paginationbtns(totalpage);
     }catch(err){
         console.log(err)
     }
@@ -17,6 +20,7 @@ FetchData()
 let cartArr = JSON.parse(localStorage.getItem("cart")) || []
 
 let container = document.querySelector(".inner")
+const paginationDiv=document.getElementById('pagination-wrapper');
   function displayproduct(data){
     container.innerHTML=null
     data.forEach((product)=>{
@@ -48,4 +52,22 @@ let container = document.querySelector(".inner")
     container.append(card)
 
   })
+  }
+  function paginationbtns(page){
+    let btn=[]
+    for(let i=1;i<=page;i++){
+      btn.push(`<button class='pagination-button' data-page-number=${i}>
+      ${i}</button>`)
+    }
+    paginationDiv.innerHTML=btn.join("")
+  
+  let all_btn=document.querySelectorAll(".pagination-button")
+  
+  for(let btns of all_btn){
+    btns.addEventListener('click',(e)=>{
+      console.log(e.target.dataset.pageNumber);
+      FetchData(e.target.dataset.pageNumber)
+    })
+  }
+  
   }
