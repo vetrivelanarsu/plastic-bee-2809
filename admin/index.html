@@ -62,7 +62,7 @@
     <h3 class="i-name">
       Dashboard
     </h3>
-
+    <button id="btn">+Add Product</button>
     <div class="values">
       <div class="val-box">
         <i class="fa-solid fa-users"></i>
@@ -107,6 +107,8 @@
             <th>ISBN</th>
             <th>STATUS</th>
             <th>DELETE</th>
+            
+            <th>EDIT</th>
 
           </tr>
         </thead>
@@ -135,17 +137,57 @@
 
             <td class="edit"><a href="#">Edit</a></td>
           </tr> -->
+
+
         </tbody>
       </table>
     </div>
+    <div id="vac" class="formpop">
+      <div class="formcontent">
+      <!-- <form > -->
+        <!-- <label for="otp">Enter ID</label> -->
+  
+        <input type="text" placeholder="Enter ID" id="id" required> 
+      <!-- <label for="otp">Enter Author Name</label> -->
+  
+  <input type="text" placeholder="Enter Author Name" id="author" required>
+  
+  <!-- <label for="otp">Enter Genre</label> -->
+  
+  <input type="text" placeholder="Enter Genre" id="genre" required>
+  <!-- <label for="otp">Enter Image</label> -->
+  
+  <input type="text" placeholder="Enter Image Url" id="image" required>
+  <!-- <label for="otp">Enter ISBN</label> -->
+  
+  <input type="text" placeholder="Enter ISBN" id="isbn" required>
+  <!-- <label for="otp">Enter Name</label> -->
+  
+  <input type="text" placeholder="Enter Book Name" id="name" required>
+  <!-- <label for="otp">Enter Pages</label> -->
+  
+  <input type="text" placeholder="Enter Total Pages" id="Pages" required>
+  <!-- <label for="otp">Enter Price</label> -->
+  
+  
+  
+  <input type="text" placeholder="Enter Price" id="price" required>
+  <button type="submit" class="btn">Add</button>
+  <button type="submit" class="btns">Update</button>
+  
+  <!-- </form> -->
+</div>
+  </div>
 
   </section>
+  
 
   <script>
     $('#menu-btn').click(function(){
       $('#menu').toggleClass("active");
     })
   </script>
+  
 
 </body>
 
