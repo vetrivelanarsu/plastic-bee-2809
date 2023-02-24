@@ -117,6 +117,20 @@ padding-top: 20px;
     cursor: pointer;
     margin-right: 20px;
 }
+#btn{
+    display: block;
+    margin: auto;
+    margin-left: 970px;
+    padding: 5px 10px;
+   color: #111827;
+   font-weight: 600;
+   background-color: chartreuse;
+   border: none;
+   border-radius: 4px;
+   position: relative;
+   /* z-index: 5px; */
+    
+}
 
 .i-name{
     color: #444a53;
@@ -243,6 +257,19 @@ tbody tr td {
         margin-left: 270px;
         transition: 0.3s ease;
     }
+    #btn{
+        display: block;
+        margin: auto;
+        /* margin-left: 970px; */
+        padding: 5px 10px;
+       color: #111827;
+       font-weight: 600;
+       background-color: chartreuse;
+       border: none;
+       border-radius: 4px;
+       position: relative;
+        
+    }
     #interface .navigation{
         width: 100%;
     }
@@ -289,3 +316,58 @@ tbody tr td {
         margin: 30px 15px 30px 15px;
     }
 }
+.formpop{
+    display: none;
+    position: fixed;
+    height: 100%;
+    bottom: 0px;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    /* display: flex;
+    align-items: center; */
+}
+.formcontent{
+    max-width: 300px;
+    padding: 10px;
+    /* height: 100%; */
+    background-color: white;
+
+}
+.formcontent input[type=text]:focus{
+background-color: #ddd;
+outline: none;
+}
+.formcontent input[type=text]{
+    width:100%;
+    padding:15px;
+    margin: 5px 0px 22px 0px;
+    border: none;
+    background: #f1f1f1;
+}
+.formcontent .btn{
+background-color: #04aa6d;
+color: white;
+padding: 16px 20px;
+border:none;
+cursor: pointer;
+width: 100%;
+margin-bottom: 10px;
+opacity: 0.8;
+}
+.formcontent .btn:hover{
+opacity: 1;
+}
+.formcontent .btns{
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    }
+    .formcontent .btns:hover{
+    opacity: 1;
+    }
