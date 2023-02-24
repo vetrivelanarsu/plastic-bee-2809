@@ -71,6 +71,4 @@ loginuser.addEventListener('submit',function(event){
                 alert("User email is not found")
             }
         })
-        // }
-    // }
 })

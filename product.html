@@ -9,6 +9,8 @@
         *{
          margin :0px;
         padding:0px;
+        font-style: sans-serif;
+        box-sizing: border-box;
         }
         .full{
             width: 100%;
@@ -21,82 +23,132 @@
         .left{
             width: 20%;
            text-align: center;
-           border: 1px solid red;
+           /* border: 1px solid red; */
         }
         .productlist{
             width:80%;
-            border: 1px solid red;
-            margin-left: 30px;
+            /* border: 1px solid red; */
+           
         }
         .productlist>.inner{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(5,1fr);
             gap: 10px;
-            border: 1px solid red;
+            /* border: 1px solid red; */
         }
         .inner>div{
             width:90%;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            border: 15px;
+            border: 10px;
             margin: auto;
             text-align: center;
             padding-bottom: 10px;
         }
         .inner>div>img{
             width : 90%;
-
+           cursor:pointer;
         }
-        .inner>div>button{
+        .inner>div>button:hover{
+            /* border: #c0a02e; */
+           background-color:#c0a02e;
+           color:white;
+            padding: 5px;
+            cursor: pointer;
             border: none;
-            color:#c0a02e;
-            background-color:#84ccff;
+        }
+        
+        .left{
+            text-align: left;
+            padding-left: 30px;
             
         }
-        .left>li{
-            text-decoration: none;
+        .left>ul>li{
+           padding-bottom: 10px;
+            color: #2f82d5;
+            
         }
+        .left>ul>li:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+       li{
+        list-style: none;
+       }
         #pagination-wrapper{
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
             margin: auto;
             text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         #pagination-wrapper>.pagination-button{
             text-align: center;
             width: 75px;
             height: 30px;
+            color: #c0a02e;
+            margin-right: 15px;
+            cursor: pointer;
         }
-
+        .pagination-button:hover{
+            background-color: #2f82d5;
+            border: none;
+        }
+        .cardiv{
+            background-color:#ffff;
+            color: #347f61 ;
+            padding-left: 10px;
+           
+        }
+        .cardname{
+            color: #c0a02e;
+            text-align: left;
+        }
+        .cardauth{
+          text-align: left;
+        }
+        .cardgenre{
+            text-align: left;
+        }
+        .cardprice{
+            text-align: left;
+            color: #21282d;
+        }
+        .cardpage{
+            text-align: left;
+            color: #21282d;
+        }
+        
     </style>
 </head>
 <body>
     <div class="up">
-         <h1>BOOKS</h1>
-         <p>Discover swoon-worthy romance novels and the greatest love stories of all time.</p>
+         <h1 style="color:#c0a02e ;padding-bottom: 20px;">BOOKS</h1>
+         <p style="padding-bottom:40px;color:#c0a02e ">Discover swoon-worthy romance novels and the greatest love stories of all time.</p>
      </div>
  
     <div class="full">
-     <div class="left">
+     <div class="left" style="text-decoration:none;padding-bottom: 20px;">
      <ul>
-        <h2>CUSTOMER FAVUORITES</h2>
-        <li>B&N Top 100</li>
-        <li>Teens & YA Top 100</li>
-        <li>Kids Top 100</li>
-        <li>New Releases</li>
-        <li>Coming Soon</li>
-        <li>Books By Subject</li>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">CUSTOMER FAVUORITES</h2>
+        <li  style=" font-size: 14px;">B&N Top 100</li>
+        <li  style=" font-size: 14px;">Teens & YA Top 100</li>
+        <li  style=" font-size: 14px;">Kids Top 100</li>
+        <li  style=" font-size: 14px;">New Releases</li>
+        <li  style=" font-size: 14px;">Coming Soon</li>
+        <li  style=" font-size: 14px;">Books By Subject</li>
      </ul>
      <ul>
-        <h2>SPECIAL VALUES</h2>
-        <li>Buy 1, Get 1 50% Off</li>
-        <li>Bestsellers 30% Off</li>
-        <li>Up to 30% Off Pre-Orders</li>
-        <li>Book Annex</li>
-        <li>B&N Collectible Editions</li>
-        <li>Coupons & Deals</li>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SPECIAL VALUES</h2>
+        <li  style=" font-size: 14px;">Buy 1, Get 1 50% Off</li>
+        <li  style=" font-size: 14px;">Bestsellers 30% Off</li>
+        <li  style=" font-size: 14px;">Up to 30% Off Pre-Orders</li>
+        <li style=" font-size: 14px;">Book Annex</li>
+        <li  style=" font-size: 14px;">B&N Collectible Editions</li>
+        <li style=" font-size: 14px;">Coupons & Deals</li>
      </ul>
      <ul>
-        <h2>SPECIAL COLLECTIONS</h2>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SPECIAL COLLECTIONS</h2>
         <li>Our Monthly Picks</li>
         <li>Book Club Selections</li>
         <li>Discover Pick of the Month</li>
@@ -105,7 +157,7 @@
         <li>Boxed Sets</li>
      </ul>
      <ul>
-        <h2>SUBJECTS</h2>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SUBJECTS</h2>
         <li>Contemporary Romance</li>
         <li>Historical Romance</li>
         <li>Other Romance</li>
@@ -117,6 +169,7 @@
      </div>
 
     <div class="productlist">
+        <h3 style="color:grey; text-align: center;margin-bottom: 30px;font-size: 25px;padding-right: 90px;">----------------- Believe in a Thing Called Love: Up to 30% Off ---------------</h3>
        <div class="inner">
           <!-- code goes here  -->
        </div>
