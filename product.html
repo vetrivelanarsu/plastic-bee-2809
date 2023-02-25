@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
+    
     <style>
         *{
          margin :0px;
@@ -127,6 +128,128 @@
             text-align: left;
             color: #21282d;
         }
+        #find{
+    text-align: center;
+    font-size: small;
+   }
+   #buy{
+    text-align: center;
+   }
+   .carousel{
+    width:90%;
+    margin-left: 20px;
+    /* height:300px; */
+    counter-increment: carousel-cell;
+   }
+   #upto{
+    margin-top: 25px;
+    padding:20px
+   }
+   #next{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+    text-align: center;
+    justify-content: space-around;
+   }
+
+   /* Third Slider */
+   .slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .slider-button-backward {
+    left: 20px;
+  }
+  
+  .slider-button-forward {
+    right: 20px;
+  }
+  
+  .slider-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ #know{
+  text-align: center;
+  font-size: small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }  
+ #blog{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  
+ }
+ #footer{
+  display: flex;
+  justify-content: space-evenly;
+ }
+ #footer>div>p{
+  color: gray;
+  font-size: smaller;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ #footer>div>h4{
+  color: rgb(0, 0, 0);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+
+ #footer>div>p:hover {
+  text-decoration: underline;
+  
+}
+#footer1{
+  display: flex;
+  flex-direction: column;
+}
+#inone{
+  height:45px;
+}
+#intwo{
+  height:45px;
+}
+#follow{
+  display: flex;
+  gap:5px;
+  margin-top: 5px;
+}
+#follow>div{
+  padding: 10px;
+}
+#lastfoo{
+  width:70%;
+  display: flex;
+  gap: 10px;
+  color: gray;
+  font-weight: 100;
+  font-size: smaller;
+  justify-content: space-around;
+}
         
     </style>
 </head>
@@ -173,6 +296,11 @@
         <li class="desc" value="desc">Name in Descending</li> 
      </ul>
      <ul>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SORT</h2>
+        <li class="ascp" value="1">Price in Ascending</li>
+        <li class="descp" value="desc">Price in Descending</li> 
+     </ul>
+     <ul>
         <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SPECIAL COLLECTIONS</h2>
         <li>Our Monthly Picks</li>
         <li>Book Club Selections</li>
@@ -211,6 +339,169 @@
 
 
 </div>
+
+
+<!-- footer  -->
+
+<hr>
+  <div id="upto">
+    <img width="100%" src="next_read_images\26212_BB_D_Moomin_02-22.jpg" alt="">
+   </div>
+
+   <hr>
+   <h4 id="buy">Get to Know Barnes and Noble Online</h4>
+   <div id="know">
+    <h4>Buy Books Online at BN.com, America's Favorite Bookstore</h4>
+    <p>No matter what you're a fan of, from Fiction to Biography, Sci-Fi, Mystery, YA, Manga, and more, Barnes & Noble has the perfect book for you. <br>
+      Shop bestselling books from the NY Times Bestsellers list, or get personalized recommendations to find something new and unique! Discover kids books for children of all ages including classics like Dr. Seuss to modern favorites like the Dog Man series.</p>
+   </div>
+
+<hr>
+
+<div id="blog">
+
+  <div>
+   <img src="footer_icons\icons8-gadget-64.png" alt="">
+   <p>B&N APPS</p>
+  </div>
+
+  <div>
+    <img src="footer_icons\icons8-earphone-64.png" alt="">
+    <p>B&N AUDIOBOOKS</p>
+  </div>
+
+  <div>
+    <img src="footer_icons\icons8-google-blog-search-64.png" alt="">
+    <p>B&N READ BLOG</p>
+  </div>
+
+  <div>
+    <img src="footer_icons\icons8-podcast-64.png" alt="">
+    <p>B&N PODCAST</p>
+  </div>
+
+  <div>
+    <img width="65px" src="footer_icons\icons8-membership-card-80.png" alt="">
+    <p>B&N MEMBERSHIP</p>
+  </div>
+
+  <div>
+    <img width="65px" src="footer_icons\icons8-shopping-bag-50.png" alt="">
+    <p>IN STORE PICKUP</p>
+  </div>
+
+  <div>
+    <img width="65px" src="footer_icons\icons8-gift-card-80.png" alt="">
+    <p>GIFT CARDS</p>
+  </div>
+
+  <div>
+    <img src="footer_icons\icons8-shop-64.png" alt="">
+    <p>STORES & EVENTS</p>
+  </div>
+
+  <div>
+    <img width="65px" src="footer_icons\icons8-debit-card-80.png" alt="">
+    <p>B&N MASTERCARD</p>
+  </div>
+
+</div>
+
+<hr>
+
+<div id="footer">
+
+  <div>
+    <h4>B&N SERVICES</h4>
+    <p>Affiliate Program</p>
+    <p>Publisher & Author Guidelines</p>
+    <p>Bulk Order Discounts</p>
+    <p>B&N Mobile Apps</p>
+    <p>B&N Membership</p>
+    <p>B&N Mastercard</p>
+    <p>B&N Kids' Club</p>
+    <p>B&N Educators</p>
+    <p>B&N Bookfairs</p>
+  </div>
+
+  <div>
+    <h4>ABOUT US</h4>
+    <p>About B&N</p>
+    <p>Careers at B&N</p>
+    <p>Barnes & Noble, Inc.</p>
+    <p>B&N Kitchen</p>
+  </div>
+
+  <div>
+    <h4>QUICK HELP</h4>
+    <p>Help Center</p>
+    <p>Covid Safety</p>
+    <p>Shipping & Returns</p>
+    <p>Store Pickup</p>
+    <p>Order Status</p>
+    <p>Product Recalls</p>
+    <p>Corrections & Updates</p>
+    <p>Gift Cards</p>
+  </div>
+
+  <div>
+    <h4>SHOP BY CATEGORY</h4>
+    <p>Books</p>
+    <p>Fiction</p>
+    <p>Nonfiction</p>
+    <p>Kids</p>
+    <p>Teens & YA</p>
+    <p>eBooks</p>
+    <p>Audiobooks</p>
+    <p>NOOK Tablets & eReaders</p>
+    <p>Shop Easter Gifts & Books</p>
+  </div>
+  <div id="footer1">
+    <h4>FIND A STORE</h4>
+    <input id="inone" type="text" placeholder="Store name,location,or ZIP code">
+    <h4>SIGN UP FOR SAVINGS, NEWS, AND UPDATES</h4>
+    <input id="intwo" type="text" placeholder="Email Address">
+    <div id="follow">
+      <h4>FOLLOW US</h4>
+      <div>
+        <img width="35px" src="footer_icons\icons8-facebook-50.png" alt="">
+      </div>
+      <div>
+        <img width="35px" src="footer_icons\icons8-twitter-circled-50.png" alt="">
+      </div>
+      <div>
+        <img width="38px"src="footer_icons\icons8-instagram-48.png" alt="">
+      </div>
+     
+      
+     
+    </div> 
+  </div>
+  </div>
+ 
+  
+  
+
+</div>
+
+<hr>
+<div id="lastfoo">
+  <p>Terms of Use</p>
+  <p>Copyright & Trademark</p>
+  <p>Privacy</p>
+  <p>Do Not Sell My Personal Information</p>
+  <p>Accessibility</p>
+  <p>Cookie Policy</p>
+  <p>Sitemap</p>
+</div>
+<hr>
+
+
+
+
+
+
+  
 
 
 </body>
