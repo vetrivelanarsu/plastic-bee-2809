@@ -6,6 +6,7 @@ async function FetchData(page=1){
         let totalpage=Math.ceil(totalitem/10)
         res = await res.json()
         console.log(res)
+        
         displayproduct(res)
         paginationbtns(totalpage);
     }catch(err){
@@ -15,47 +16,79 @@ async function FetchData(page=1){
 
 FetchData()
 
-async function fullldata(){
+
+async function filterdata(){
   try{
-    let res = await fetch('https://pastic4-bee.onrender.com/Books')
-    res = await res.json()
-    console.log(res)
-    
+      let res = await fetch(`https://pastic4-bee.onrender.com/Books`)
+   
+      res = await res.json()
+      console.log(res)
+      filtered(res)
+      // filterdata(res)
+     
   }catch(err){
-    console.log(err)
+      console.log(err)
   }
 }
+
+let filterp = document.querySelector('#filter')
+
+filterp.addEventListener("change",filterg)
+function filterg(){
+  filterdata()
+}
+function filtered(data){
+  let value=filterp.value;
+  if(value==""){
+    FetchData()
+  }else{
+    data=data.filter((product)=>{
+      return product.genre == value
+    })
+    displayproduct(data)
+  }
+}
+
+
 
 let cartArr = JSON.parse(localStorage.getItem("cart")) || []
 
 let container = document.querySelector(".inner")
 const paginationDiv=document.getElementById('pagination-wrapper');
+
+
+
+
+
+
+
+
   function displayproduct(data){
     container.innerHTML=null
-    data.forEach((product)=>{
+    data.forEach((product,index)=>{
     let card = document.createElement("div")
-    // card.classList.add("cardiv")
+ 
     card.setAttribute("class","cardiv")
     let image = document.createElement("img")
-    // image.classList.add("cardimg")
+ 
     image.setAttribute("class","cardimg")
     let name =  document.createElement("h3")
-    // name.classList.add("cardname")
+   
     name.setAttribute("class","cardname")
     let authname = document.createElement("p")
-    // authname.classList.add("cardauth")
+  
     authname.setAttribute("class","cardauth")
     let genre = document.createElement('p')
-    // genre.classList.add("cardgenre")
+  
     genre.setAttribute("class","cardgenre")
     let price =document.createElement("p")
-    // price.classList.add("cardprice")
+  
     price.setAttribute("class","cardprice")
     let pages = document.createElement('p')
-    // pages.classList.add("cardpage")
+    
     pages.setAttribute("class","cardpage")
     let addtocart = document.createElement("button")
-    // addtocart.classList.add("cardadd")
+   
     addtocart.setAttribute("class","cardadd")
     addtocart.textContent="Add to Cart"
 
@@ -65,9 +98,17 @@ const paginationDiv=document.getElementById('pagination-wrapper');
     genre.textContent=`Genre : ${product.genre}`
     price.textContent=`Price : ${product.price}`
     pages.textContent=`Pages : ${product.pages}`
-
-
-
+    
+     addtocart.addEventListener('click',()=>{
+      if(checkduplicate(product)){
+        alert("product Already in the Cart")
+      }else{
+      cartArr.push(product)
+      cartArr.splice(index,1)
+      localStorage.setItem("cart",JSON.stringify(cartArr))
+      alert("Product Added to Cart")
+      }
+     })
 
 
 
@@ -77,6 +118,14 @@ const paginationDiv=document.getElementById('pagination-wrapper');
 
   })
   }
+   function checkduplicate(product){
+    for(let i=0;i<cartArr.length;i++){
+      if(cartArr[i].id===product.id){
+        return true
+      }
+    }
+    return false
+   }
   function paginationbtns(page){
     let btn=[]
     for(let i=1;i<=page;i++){
@@ -95,5 +144,41 @@ const paginationDiv=document.getElementById('pagination-wrapper');
   }
   
   }
+let ascending = document.querySelector(".asc")
+let descending = document.querySelector(".desc")
 
-  function 
+ascending.addEventListener("click",()=>{
+  console.log("asc")
+  let res = fetch("https://pastic4-bee.onrender.com/Books?_limit=10&_page=2&_sort=name&_order=asc")
+  res.then((res)=>{
+    let data =res.json()
+    return data
+  })
+  .then((res)=>{
+    console.log(res)
+    displayproduct(res)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+})
+
+descending.addEventListener("click",()=>{
+  console.log("desc")
+  let res = fetch("https://pastic4-bee.onrender.com/Books?_limit=10&_page=2&_sort=name&_order=desc")
+  res.then((res)=>{
+    let data =res.json()
+    return data
+  })
+  .then((data)=>{
+    console.log(data)
+    displayproduct(data)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+})
+
+
+
+
