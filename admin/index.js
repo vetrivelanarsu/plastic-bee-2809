@@ -1,5 +1,5 @@
 let tbodyel = document.querySelector("tbody")
-let countEl=document.getElementById("count")
+let countEl=document.getElementsByClassName(".counter")
 
 let authorEl=document.getElementById("author")
 let genreEl=document.getElementById("genre")
@@ -9,13 +9,24 @@ let nameEl=document.getElementById("name")
 let pagesEl=document.getElementById("Pages")
 let priceEl=document.getElementById("price")
 let idEl=document.getElementById("id")
+let countp = document.getElementById("p-counter")
+let c=0
+let stCount=document.getElementById("s-count")
+let sCount=document.getElementById("o-stock")
+
+
+
+
 
 let buttonEl=document.querySelector(".btn")
 let btnEl=document.querySelector(".btns")
 
 let AddPro=document.getElementById("btn")
+let tordersel = document.getElementById("torders")
 
-AddPro.addEventListener("click",(e)=>{
+let formel=document.querySelector("form")
+
+AddPro.addEventListener("click",(e)=>{ 
     idEl.style.display="none"
     btnEl.style.display="none"
   e.preventDefault();
@@ -69,10 +80,11 @@ async function getdata() {
     global = data
     console.log(data)
     console.log(data.length)
-    countEl.textContent=data.length
+    countp.textContent=data.length
 }
 
 function display(data) {
+    tbodyel.innerHTML=""
     data.forEach((element, i) => {
 
         let card = document.createElement("tr")
@@ -178,3 +190,47 @@ function display(data) {
 
     });
 }
+
+ let togglebtn = document.querySelectorAll(".checkbox")[0];
+let search = document.querySelectorAll(".fa-solid fa-magnifying-glass")[0]
+let body = document.querySelectorAll("#interface")[0];
+let dash = document.querySelectorAll(".i-name")[0]
+togglebtn.addEventListener("click", () => {
+  console.log("toggle")
+  body.classList.toggle("dark")
+  dash.classList.toggle("dark")
+}) 
+
+
+
+formel.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let textel = searchinp.value
+   
+    let filtered = global.filter((element) => {
+      if (element.name.toUpperCase().includes(textel.toUpperCase()) == true) { 
+        return true
+      } else {
+        return false
+      }
+    })
+    display(filtered)
+    
+  })
+
+  countEl.addEventListener("click", ()=>{
+    c++
+    console.log("hi")
+    tordersel.textContent = c
+    // stCount.textContent --
+    if(stCount.textContent>=0){
+      stCount.textContent--
+      if(stCount.textContent==-1){
+        stCount.textContent=5
+        
+          sCount.textContent++
+        
+      }
+  
+    }
+  })
