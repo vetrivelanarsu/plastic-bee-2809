@@ -61,7 +61,15 @@
         .left{
             text-align: left;
             padding-left: 30px;
-            
+        }
+        .left>.vl{
+            border-left: 2px solid grey;
+            height: 1000px;
+            position: absolute;
+            left: 18%;
+            margin-left: -3px;
+            top: 0;
+            margin-top: 115px;
         }
         .left>ul>li{
            padding-bottom: 10px;
@@ -93,6 +101,7 @@
         .pagination-button:hover{
             background-color: #2f82d5;
             border: none;
+            transition: 0.3 ease-in;
         }
         .cardiv{
             background-color:#ffff;
@@ -148,6 +157,22 @@
         <li style=" font-size: 14px;">Coupons & Deals</li>
      </ul>
      <ul>
+     <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">FILTER</h2>
+      <select style="width:150px;font-size: 14px;padding-bottom: 10px;color: #2f82d5;border: none;-webkit-appearance: none;" id="filter">
+        <option  value="">Filter</option>
+        <option value="Horror">Horror</option>
+        <option value="Biography">Biography</option>
+        <option value="Romantic">Romantic</option>
+        <option value="Health">Health</option>
+        <option value="Adventure">Adventure</option>
+    </select> 
+     </ul>
+     <ul>
+        <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SORT</h2>
+        <li class="asc" value="1">Name in Ascending</li>
+        <li class="desc" value="desc">Name in Descending</li> 
+     </ul>
+     <ul>
         <h2 style=" font-size: 16px;padding-bottom: 10px;color:#c0a02e ">SPECIAL COLLECTIONS</h2>
         <li>Our Monthly Picks</li>
         <li>Book Club Selections</li>
@@ -165,7 +190,7 @@
         <li>Romantic Fiction</li>
         <li>Themes</li>
      </ul>
-   
+     <div class="vl"></div>
      </div>
 
     <div class="productlist">
