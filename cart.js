@@ -80,3 +80,8 @@ window.addEventListener("load", ()=>{
     console.log(total)
     localStorage.setItem("total",JSON.stringify(total))
 })
+let pay = document.getElementById("pay");
+pay.addEventListener("click",function(){
+    console.log("yes");
+    window.location.href = "payment.html";
+})
