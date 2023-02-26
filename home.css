@@ -397,3 +397,97 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: smaller;
   justify-content: space-around;
 }
+
+/* login form Css */
+/* **********************************sign-in page********************************************* */
+
+/* Style the button */
+
+
+/* Style the login form */
+#clic{
+  border: none;
+  background-color: white;
+  margin-top: 6px;
+  font-weight: 700;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#loginForm{
+  /* height: 400px; */
+  text-align: center;
+}
+form {
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* width: 450px; */
+  /* height: 300px; */
+}
+#acc{
+  text-align: center;
+  font-size: larger;
+  font-weight: 600;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+
+  padding: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Center the login form */
+#loginForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the sign-up button */
+.signup {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.signup:hover {
+  background-color: #45a049;
+}
