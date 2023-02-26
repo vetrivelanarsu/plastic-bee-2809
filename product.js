@@ -179,6 +179,39 @@ descending.addEventListener("click",()=>{
   })
 })
 
+let ascendingprice= document.querySelector(".ascp")
+let descendingprice = document.querySelector(".descp")
 
+ascendingprice.addEventListener("click",()=>{
+  console.log("asc")
+  let res = fetch("https://pastic4-bee.onrender.com/Books?_limit=10&_page=2&_sort=price&_order=asc")
+  res.then((res)=>{
+    let data =res.json()
+    return data
+  })
+  .then((res)=>{
+    console.log(res)
+    displayproduct(res)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+})
+
+descendingprice.addEventListener("click",()=>{
+  console.log("desc")
+  let res = fetch("https://pastic4-bee.onrender.com/Books?_limit=10&_page=2&_sort=price&_order=desc")
+  res.then((res)=>{
+    let data =res.json()
+    return data
+  })
+  .then((data)=>{
+    console.log(data)
+    displayproduct(data)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+})
 
 
