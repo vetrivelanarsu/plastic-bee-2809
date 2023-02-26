@@ -62,7 +62,7 @@ loginuser.addEventListener('submit',function(event){
             if(el.email == loginuser.lEmail.value){
                 if(el.password===loginuser.lPassword.value){
                     alert("login successful!");
-                    window.location.assign('./index1.html');
+                    window.location.assign('./home.html');
                 }
                 else{
                     alert('wrong crendentials!')
