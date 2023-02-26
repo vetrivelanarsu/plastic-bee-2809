@@ -214,4 +214,40 @@ descendingprice.addEventListener("click",()=>{
   })
 })
 
+// search 
 
+let searchvalue = document.querySelector('#in')
+let searchForm = document.querySelector("#btn")
+
+
+var res
+async function searchdata(){
+  try{
+    res=await fetch('https://pastic4-bee.onrender.com/Books')
+    res=await res.json()
+  
+        
+    
+  }catch(err){
+    console.log(err)
+  }
+}
+searchdata()
+
+searchForm.addEventListener("click", (e) => {
+  e.preventDefault();
+
+   
+  let search = searchvalue.value
+  console.log(search)
+   console.log(res)
+  let filtered = res.filter((el) => {
+    
+    if (el.name.toUpperCase().includes(search.toUpperCase()) ===true){
+      return true;
+    } else {
+      return false;
+    }
+  });
+   displayproduct(filtered);
+});
