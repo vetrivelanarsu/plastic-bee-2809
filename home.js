@@ -87,3 +87,10 @@ let two = document.getElementById("book");
 two.addEventListener("click",()=>{
   window.location.href="product.html"
 })
+
+
+let log_in = document.getElementById("clic");
+log_in.addEventListener("click",()=>{
+  console.log("working")
+  window.location.href = "login.html"
+})
