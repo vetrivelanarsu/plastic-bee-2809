@@ -54,36 +54,14 @@ updateSlider();
 
 //////////////////sign in/signup functionality end////////////////////////////////////////
 
-function openLoginForm() {
-  document.getElementById("loginForm").style.display = "block";
-}
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
-function closeLoginForm() {
-  document.getElementById("loginForm").style.display = "none";
-}
-let SignIn = document.querySelector("#signin")
-let SignUp = document.querySelector("#done");
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
 
-
-SignIn.addEventListener("click",function(event){
-  event.preventDefault();
-  console.log("working")
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-  alert("Sign Up Successful");
-  window.location.assign("./home.html")
-
-})
-
-
-
-let one = document.getElementById("carti");
-
-one.addEventListener("click",()=>{
-  window.location.href="cart.html"
-})
-
-let two = document.getElementById("book");
-two.addEventListener("click",()=>{
-  window.location.href="product.html"
-})
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
